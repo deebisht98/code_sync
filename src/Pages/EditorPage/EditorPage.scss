@@ -1,0 +1,62 @@
+@import '../../common/colors.scss';
+
+.mainWrap {
+	display: flex;
+	color: $font-primary;
+}
+.logo {
+	font-size: 40px;
+	font-weight: 500;
+	color: $font-primary;
+	margin-bottom: 30px;
+}
+.aside {
+	height: 100vh;
+	width: 20vw;
+	display: flex;
+	flex-direction: column;
+	padding: 20px;
+	justify-content: space-between;
+}
+.connected {
+	font-size: 25px;
+	margin-bottom: 10px;
+}
+.clientsList {
+	display: flex;
+	flex-wrap: wrap;
+}
+.buttons {
+	display: flex;
+	flex-direction: column;
+}
+.leave {
+	padding: 10px;
+	margin-top: 10px;
+	border-radius: 5px;
+	width: 100%;
+	font-weight: 500;
+	border: 0;
+	color: $font-primary;
+	background-color: rgb(14, 185, 94);
+	&:hover {
+		background-color: rgb(10, 148, 74);
+	}
+	transition: all 0.2s;
+}
+.copyBtn {
+	padding: 10px;
+	margin-top: 10px;
+	border-radius: 5px;
+	width: 100%;
+	font-weight: 500;
+	border: 0;
+	&:hover {
+		background-color: rgb(175, 175, 175);
+	}
+	transition: all 0.2s;
+}
+.editorWrap {
+	width: 80vw;
+	height: 100vh;
+}
