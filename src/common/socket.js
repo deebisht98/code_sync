@@ -1,6 +1,7 @@
 import { io } from 'socket.io-client';
 
 export const initSocket = async () => {
+  console.log(process.env.REACT_APP_BACKEND_URL);
 	const options = {
 		'force new connection': true,
 		reconnectionAttempt: 'Infinity',

@@ -1,13 +1,12 @@
-@import '../../common/colors.scss';
 
 .mainWrap {
 	display: flex;
-	color: $font-primary;
+	color:#fff;
 }
 .logo {
 	font-size: 40px;
 	font-weight: 500;
-	color: $font-primary;
+	color:#fff;
 	margin-bottom: 30px;
 }
 .aside {
@@ -37,7 +36,7 @@
 	width: 100%;
 	font-weight: 500;
 	border: 0;
-	color: $font-primary;
+	color:#fff;
 	background-color: rgb(14, 185, 94);
 	&:hover {
 		background-color: rgb(10, 148, 74);

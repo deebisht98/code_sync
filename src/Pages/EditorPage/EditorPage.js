@@ -2,7 +2,7 @@ import React, { useState, useRef, useEffect } from 'react';
 import Client from '../../components/Client/Client';
 import Editor from '../../components/Editor/Editor';
 import toast from 'react-hot-toast';
-import './EditorPage.scss';
+import './EditorPage.css';
 import { initSocket } from '../../common/socket';
 import ACTIONS from '../../common/Actions';
 import {
@@ -28,6 +28,9 @@ const EditorPage = () => {
 			socketRef.current = await initSocket();
 			socketRef.current.on('connect_error', (err) => handleErrors(err));
 			socketRef.current.on('connect_failed', (err) => handleErrors(err));
+      socketRef.current.on('connect', () => {
+        console.log('Connected successfully');
+      });
 
 			function handleErrors(e) {
 				console.log('socket error', e);
@@ -67,7 +70,11 @@ const EditorPage = () => {
 				}
 			);
 		};
-		init();
+    try{
+      init();
+    }catch(e) {
+      console.error(e)
+    }
 		//clearing listeners for optimization
 		return () => {
 			socketRef.current.disconnect();
